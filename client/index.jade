@@ -5,6 +5,32 @@ html(lang='en')
     title To Do List
     link(rel='stylesheet', href='/style.css')
   body
-    h1 Hello, World
+    .container
+    h1 My To Do List
+    form#form
+      label(for='title') Title
+      input#title(type='text' placeholder='title') 
+      label(for='duedate') Due Date
+      input#duedate(type='date' name='due date')
+      label(for='priority') Priority
+      select#priority
+        option#1 High
+        option#2 Medium
+        option#3 Low
+      button#save(type='button') Save Item
+
+    .container
+      #data
+        table
+          thead
+            tr 
+              th Title
+              th Due Date
+              th Priority
+              th Is Complete?
+              th Complete
+          tbody#tbody
+
+    script(src='https://cdn.firebase.com/js/client/2.2.1/firebase.js')
     script(src='/vendor/jquery/dist/jquery.js')
     script(src='/main.js')
